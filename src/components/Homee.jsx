@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import bgImage from '../assets/bg.png';
 
 const Homee = () => {
+  // Test change to force Git update
+
   return (
     <div
       className="min-h-screen flex flex-col relative"
