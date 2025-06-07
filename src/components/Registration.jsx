@@ -26,7 +26,7 @@ const Registration = () => {
   }
 
   try {
-    const response = await axios.post("http://localhost:5001/api/users/register", formData);
+    const response = await axios.post("https://eyediseasebackend.onrender.com/api/users/register", formData);
     if (response.status === 201) {
       console.log(response.data.message);
       navigate('/login'); // ✅ Navigate to login on successful registration
