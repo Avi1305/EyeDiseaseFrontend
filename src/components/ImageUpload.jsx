@@ -29,7 +29,7 @@ const ImageUpload = () => {
     formData.append("image", image);
 
     try {
-      const response = await axios.post("http://127.0.0.1:5001/predict", formData, {
+      const response = await axios.post("https://ml-flask-server-ql8y.onrender.com/predict", formData, {
         headers: { "Content-Type": "multipart/form-data" }
       });
       console.log("Prediction response:", response.data);
@@ -90,9 +90,9 @@ const ImageUpload = () => {
                 Disease:{" "}
                 <span className="text-red-500 font-bold">{prediction.disease}</span>
               </p>
-              <img
-                src={`http://127.0.0.1:5001/uploads/${prediction.filePath.split('/').pop()}`}  // Extract filename
-                alt="Uploaded Image"
+              <img src={`https://ml-flask-server-ql8y.onrender.com/uploads/${prediction.filePath.split('/').pop()}`} 
+                alt="Uploaded Image" 
+
                 className="mt-4 rounded-lg border border-gray-300 w-64 h-64 object-cover mx-auto transition-transform duration-300 hover:scale-105"
               />
 
