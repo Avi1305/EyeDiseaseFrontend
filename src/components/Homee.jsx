@@ -1,12 +1,14 @@
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import HeroSection from "./HeroSection";
 import Features from "../components/Features";
 import Registration from "../components/Registration";
+import Login from "../components/Login";
 import Footer from "../components/Footer";
 import bgImage from '../assets/bg.png';
 
 const Homee = () => {
-  // Test change to force Git update
+  const [justRegistered, setJustRegistered] = useState(false);
 
   return (
     <div
@@ -24,16 +26,22 @@ const Homee = () => {
         style={{ opacity: 0, zIndex: 0 }}
       ></div>
 
-    
+      <div className="min-h-screen bg-gradient-to-b from-blue-50/50 to-white/70 flex flex-col">
+        <Navbar />
+        
+        {justRegistered ? (
+          <Login />
+        ) : (
+          <>
+            <HeroSection />
+            <Features />
+            <Registration onRegisterSuccess={() => setJustRegistered(true)} />
+          </>
+        )}
 
-    <div className="min-h-screen bg-gradient-to-b from-blue-50/50 to-white/70 flex flex-col">
-      <Navbar />
-      <HeroSection />
-      <Features />
-      <Registration /> {/* ✅ About Section Added */}
-      <Footer />
+        <Footer />
+      </div>
     </div>
-  </div>
   );
 };
 
