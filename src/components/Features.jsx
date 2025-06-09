@@ -1,8 +1,8 @@
 const Features = () => {
   const features = [
-    { title: "AI-Powered Analysis", description: "Advanced machine learning algorithms for accurate disease prediction" },
-    { title: "Quick Results", description: "Get your results within minutes with detailed analysis" },
-    { title: "Expert Support", description: "24/7 support from our team of eye care professionals" }
+    { title: "AI-Powered Analysis", description: "Advanced deep learning model for accurate disease prediction" },
+    { title: "Quick Results", description: " User friendly, Quick Results, Easy to use  " },
+    { title: "Vision for the Nation", description: " Improve the Nation through Eye Prediction" }
   ];
 
   return (

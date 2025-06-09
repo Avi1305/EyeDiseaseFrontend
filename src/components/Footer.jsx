@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800/95 backdrop-blur-md text-white py-12">
+    <footer className="bg-gray-800/95 backdrop-blur-md text-white py-4">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h3 className="text-xl font-bold mb-4">EyeCare AI</h3>
@@ -21,7 +21,7 @@ const Footer = () => {
         <div id="contact">
           <h3 className="text-xl font-bold mb-4">Contact Us</h3>
           <ul className="space-y-2 text-gray-400">
-            <li>Email: info@eyecareai.com</li>
+            <li>Email: eyecareai2025@.com</li>
             <li>Phone: +1 (555) 123-4567</li>
             <li>Address: Hinjewadi, Pune</li>
           </ul>
