@@ -15,7 +15,7 @@ const Navbar = () => (
               section.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="text-gray-600 hover:text-indigo-600 transition-colors"
+          className="text-gray-600 hover:text-indigo-600 transition-colors cursor-pointer"
         >
           Features
         </button>
@@ -28,7 +28,7 @@ const Navbar = () => (
               section.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="text-gray-600 hover:text-indigo-600 transition-colors"
+          className="text-gray-600 hover:text-indigo-600 transition-colors cursor-pointer"
         >
           About
         </button>
@@ -41,7 +41,7 @@ const Navbar = () => (
               section.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="text-gray-600 hover:text-indigo-600 transition-colors"
+          className="text-gray-600 hover:text-indigo-600 transition-colors cursor-pointer"
         >
           Contact
         </button>
