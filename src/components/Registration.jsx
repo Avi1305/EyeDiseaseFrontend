@@ -9,6 +9,7 @@ const Registration = () => {
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
   const [error, setError] = useState('');
   const [justRegistered, setJustRegistered] = useState(false); // ✅ flag to show login
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
     setError('');
@@ -47,11 +48,11 @@ const Registration = () => {
     //   ></div>
 
     <div style={{ position: 'relative', zIndex: 1 }}>
-      <Navbar />
+      {/* <Navbar /> */}
 
       {justRegistered ? (
         <div className="flex justify-center py-16">
-          <LoginForm />
+          <Login />
         </div>
       ) : (
         <section id="register" className="py-20 bg-gradient-to-b from-blue-50/50 to-white/70">
@@ -95,19 +96,30 @@ const Registration = () => {
                     title="Please enter a valid email address."
                   />
 
-                  <input
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500
-             focus:border-indigo-500 transition-all duration-200 bg-gray-50 hover:bg-white"
-                    value={formData.password}
-                    onChange={handleChange}
-                    required
-                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                  <div className="relative">
+                    <input
+                      name="password"
+                      type={showPassword ? "text" : "password"}
+                      placeholder="Password"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500
+     focus:border-indigo-500 transition-all duration-200 bg-gray-50 hover:bg-white pr-12"
+                      value={formData.password}
+                      onChange={handleChange}
+                      required
+                      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                      title="Password must be at least 8 characters long and include uppercase, lowercase, number, and special character."
+                    />
 
-                    title="Password must be at least 8 characters long and include uppercase, lowercase, number, and special character."
-                  />
+
+                    {/* Toggle Show/Hide Password */}
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-sm text-indigo-600 font-semibold focus:outline-none cursor-pointer"
+                    >
+                      {showPassword ? "Hide" : "Show"}
+                    </button>
+                  </div>
                 </div>
 
 

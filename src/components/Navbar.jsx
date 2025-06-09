@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => (
   <nav className="bg-white/80 backdrop-blur-md fixed w-full z-50 shadow-sm">
-    <div className="max-w-7xl mx-auto px-4 flex justify-between h-16">
+    <div className="max-w-7xl mx-auto px-4 flex justify-between h-16 flex items-center">
       <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
         EyeCare AI
       </h1>
@@ -15,7 +15,7 @@ const Navbar = () => (
               section.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors"
+          className="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors cursor-pointer"
         >
           Get Started
         </button>
