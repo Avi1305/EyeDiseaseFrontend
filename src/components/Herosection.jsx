@@ -14,7 +14,9 @@ const HeroSection = () => (
 
 
       </div>
-      
+      <div className="lg:w-1/2">
+        <img src="/eye-scan.jpg" alt="AI Eye Scanning" className="rounded-2xl shadow-2xl w-full" />
+      </div>
     </div>
   </section>
 );
