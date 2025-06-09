@@ -19,7 +19,7 @@ const Registration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5001/register', formData);
+      const response = await axios.post('https://eyediseasebackend.onrender.com/api/users/register', formData);
       if (response.status === 201) {
         console.log(response.data.message);
         setJustRegistered(true); // ✅ show login form
@@ -104,7 +104,8 @@ const Registration = () => {
                     value={formData.password}
                     onChange={handleChange}
                     required
-                    pattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+
                     title="Password must be at least 8 characters long and include uppercase, lowercase, number, and special character."
                   />
                 </div>

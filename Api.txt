@@ -1,0 +1,4 @@
+https://eyediseasebackend.onrender.com/api/users/register
+https://eyediseasebackend.onrender.com/api/users/login
+
+https://ml-flask-server-ql8y.onrender.com/predict
