@@ -90,11 +90,14 @@ const ImageUpload = () => {
                 Disease:{" "}
                 <span className="text-red-500 font-bold">{prediction.disease}</span>
               </p>
-              <img src={`https://ml-flask-server-ql8y.onrender.com/uploads/${prediction.filePath.split('/').pop()}`} 
-                alt="Uploaded Image" 
+              {prediction.filePath && typeof prediction.filePath === 'string' ? (
+                <img
+                  src={`https://ml-flask-server-ql8y.onrender.com/uploads/${prediction.filePath.split('/').pop()}`}
+                  alt="Uploaded Image"
+                  className="mt-4 rounded-lg border border-gray-300 w-64 h-64 object-cover mx-auto transition-transform duration-300 hover:scale-105"
+                />
+              ) : null}
 
-                className="mt-4 rounded-lg border border-gray-300 w-64 h-64 object-cover mx-auto transition-transform duration-300 hover:scale-105"
-              />
 
             </div>
           )}
