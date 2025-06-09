@@ -10,6 +10,18 @@ const Navbar = () => (
         <button
           type="button"
           onClick={() => {
+            const section = document.getElementById('register');
+            if (section) {
+              section.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          className="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors"
+        >
+          Get Started
+        </button>
+        <button
+          type="button"
+          onClick={() => {
             const section = document.getElementById('features');
             if (section) {
               section.scrollIntoView({ behavior: 'smooth' });

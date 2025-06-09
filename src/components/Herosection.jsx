@@ -9,17 +9,7 @@ const HeroSection = () => (
           Using cutting-edge AI technology to detect and predict eye diseases early.
         </p>
        
-        <button
-          onClick={() => {
-            const section = document.getElementById('register');
-            if (section) {
-              section.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
-          className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full text-lg font-semibold"
-        >
-          Get Started
-        </button>
+        
 
 
 
